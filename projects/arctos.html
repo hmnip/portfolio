@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARCTOS Sorting Cell | Phoenix Pitaknarongphorn</title>
+  <meta name="description" content="Case study: leading the BU Robotics Club team building a vision-guided sorting cell around a 6-DOF arm on a linear rail, with ROS 2 and CAN bus control.">
+  <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f2a4a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <!-- Sharing previews. Absolute URLs so LinkedIn and Slack show the image. Change the domain here if the site moves. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Pitaknarongphorn">
+  <meta property="og:url" content="https://hmnip.github.io/portfolio/projects/arctos.html">
+  <meta property="og:title" content="ARCTOS Sorting Cell | Phoenix Pitaknarongphorn">
+  <meta property="og:description" content="Case study: leading the BU Robotics Club team building a vision-guided sorting cell around a 6-DOF arm on a linear rail, with ROS 2 and CAN bus control.">
+  <meta property="og:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Phoenix Pitaknarongphorn: building autonomous robots, from mechanism to control code.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ARCTOS Sorting Cell | Phoenix Pitaknarongphorn">
+  <meta name="twitter:description" content="Case study: leading the BU Robotics Club team building a vision-guided sorting cell around a 6-DOF arm on a linear rail, with ROS 2 and CAN bus control.">
+  <meta name="twitter:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <!-- Sets saved theme and the js class before first paint (inline on purpose, avoids a flash) -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-mark" href="../index.html">PHOENIX<span>/</span>PITAKNARONGPHORN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="nav-list">
+          <li><a class="is-active" href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="crumb" href="../index.html#projects">All projects</a>
+
+    <!-- 1. TITLE BLOCK ====================================================== -->
+    <header class="title-block">
+      <div class="title-block__name">
+        <span class="label label--accent">Case study 02</span>
+        <h1>ARCTOS Sorting Cell</h1>
+        <p class="expansion">Vision-guided 6-DOF arm on a linear rail</p>
+      </div>
+      <dl class="title-block__grid">
+        <div class="title-block__cell"><dt>Dates</dt><dd>Sep 2025 to present</dd></div>
+        <div class="title-block__cell"><dt>My role</dt><dd>Project Lead</dd></div>
+        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
+        <div class="title-block__cell"><dt>Organization</dt><dd>BU Robotics Club</dd></div>
+      </dl>
+      <div class="title-block__row">
+        <ul class="tags" aria-label="Tools">
+          <li><span class="tag">ROS 2</span></li>
+          <li><span class="tag">C++ (Arduino)</span></li>
+          <li><span class="tag">CAN bus</span></li>
+          <li><span class="tag">Onshape</span></li>
+          <li><span class="tag">Python</span></li>
+          <li><span class="tag">MATLAB</span></li>
+          <li><span class="tag">MuJoCo</span></li>
+          <li><span class="tag">Isaac Sim</span></li>
+        </ul>
+        <div class="title-block__links">
+          <!-- Link the repo only once it's confirmed public: https://github.com/BURC-ARCTOS-ARM -->
+          <span class="todo">[TODO: GitHub link, confirm BURC-ARCTOS-ARM is public]</span>
+          <span class="todo">[TODO: video link]</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. TL;DR ============================================================ -->
+    <aside class="tldr" aria-label="Summary">
+      <span class="label label--accent">TL;DR</span>
+      <p>ARCTOS is a vision-guided sorting cell. An overhead camera identifies objects in a pick-up area, and a 6-DOF arm on a linear rail motion-plans to sort them into bins.</p>
+      <p>I lead the team. I planned the control architecture, I'm designing the linear rail in Onshape, and I work on low-level arm control in C++ over CAN bus.</p>
+      <p><span class="todo">[TODO: current status or first result, e.g. first successful sort]</span></p>
+    </aside>
+
+    <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
+    <section class="section section--case" aria-labelledby="problem-title">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 id="problem-title">Problem and constraints</h2>
+      </div>
+      <div class="prose">
+        <p>The cell has to find objects in a pick-up area and sort each one into the right bin, with no one guiding the arm.</p>
+        <ul>
+          <li><strong>The arm.</strong> It's based on the open-source <a href="https://arctosrobotics.com" rel="noopener">Arctos</a> design: 3D-printed, with cycloidal and planetary gearboxes, a 600 mm reach, and a 1 kg payload.</li>
+          <li><strong>The team.</strong> Members come from mechanical, electrical, software, and biomedical engineering. Each software system needed a clear owner.</li>
+          <li><strong>The rail.</strong> The linear rail extends the arm's workspace, so its tolerances and fits matter.</li>
+          <li><span class="todo">[TODO: object types, number of bins, and any cycle time or accuracy target]</span></li>
+        </ul>
+        <p class="muted">Credit: the arm design comes from the open-source Arctos project at <a href="https://arctosrobotics.com" rel="noopener">arctosrobotics.com</a>. The rail, control architecture, software, and sorting cell are the team's work.</p>
+      </div>
+    </section>
+
+    <!-- 4. SYSTEM OVERVIEW ================================================== -->
+    <section class="section section--case" aria-labelledby="system-title">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 id="system-title">System overview</h2>
+      </div>
+      <figure class="figure">
+        <div class="diagram diagram--wide" tabindex="0" role="region" aria-label="System diagram (scrollable)">
+          <!-- Editable diagram. Each box is a <g class="node">. Add "node--accent" to mark my work. -->
+          <svg viewBox="0 0 960 330" role="img" aria-labelledby="sys-title sys-desc">
+            <title id="sys-title">ARCTOS system overview</title>
+            <desc id="sys-desc">An overhead camera feeds a Raspberry Pi that runs vision. The Pi, a ThinkPad, and a control board are integrated through ROS 2. The ThinkPad runs higher-level MATLAB and Python scripts. Low-level arm control runs in C++ on Arduino over CAN bus to the 6-DOF arm on its linear rail. A MuJoCo digital twin runs in NVIDIA Isaac Sim.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker>
+            </defs>
+
+            <g class="node">
+              <rect x="20" y="40" width="170" height="64" rx="2"/>
+              <text x="105" y="68" text-anchor="middle">Overhead camera</text>
+              <text class="sub" x="105" y="87" text-anchor="middle">pick-up area</text>
+            </g>
+            <g class="node">
+              <rect x="250" y="40" width="190" height="64" rx="2"/>
+              <text x="345" y="68" text-anchor="middle">Raspberry Pi</text>
+              <text class="sub" x="345" y="87" text-anchor="middle">vision</text>
+            </g>
+            <g class="node">
+              <rect x="500" y="40" width="190" height="64" rx="2"/>
+              <text x="595" y="68" text-anchor="middle">ThinkPad</text>
+              <text class="sub" x="595" y="87" text-anchor="middle">MATLAB + Python</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="750" y="40" width="190" height="64" rx="2"/>
+              <text x="845" y="68" text-anchor="middle">Control board</text>
+              <text class="sub" x="845" y="87" text-anchor="middle">C++ on Arduino</text>
+            </g>
+
+            <path class="edge" d="M190 72H248" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="219" y="64" text-anchor="middle">image</text>
+            <path class="edge" d="M440 72H498" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="469" y="64" text-anchor="middle">ROS 2</text>
+            <path class="edge" d="M690 72H748" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="719" y="64" text-anchor="middle">ROS 2</text>
+
+            <!-- ROS 2 bracket over the three compute nodes -->
+            <path class="edge" d="M250 128H940" stroke-dasharray="2 4"/>
+            <text class="edge-label" x="595" y="146" text-anchor="middle">integrated through ROS 2 (Lyrical)</text>
+
+            <path class="edge" d="M845 104V218" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="858" y="190">CAN bus</text>
+
+            <g class="node node--accent">
+              <rect x="700" y="220" width="240" height="72" rx="2"/>
+              <text x="820" y="250" text-anchor="middle">6-DOF arm + linear rail</text>
+              <text class="sub" x="820" y="270" text-anchor="middle">Arctos arm, rail in Onshape</text>
+            </g>
+            <g class="node">
+              <rect x="20" y="220" width="250" height="72" rx="2"/>
+              <text x="145" y="250" text-anchor="middle">Bins</text>
+              <text class="sub" x="145" y="270" text-anchor="middle">sorted objects</text>
+            </g>
+            <path class="edge" d="M698 256H272" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="485" y="248" text-anchor="middle">pick and place</text>
+
+            <g class="node">
+              <rect x="330" y="180" width="250" height="56" rx="2" stroke-dasharray="5 4"/>
+              <text x="455" y="204" text-anchor="middle">Digital twin</text>
+              <text class="sub" x="455" y="222" text-anchor="middle">MuJoCo model in Isaac Sim</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>
+          Fig. 1. ARCTOS control architecture. <span class="scroll-hint">Scroll sideways to see the whole diagram.</span>
+          <span class="todo">[TODO: confirm the control board is the Arduino, and that the rail runs on the same CAN bus]</span>
+          <ul class="legend" aria-label="Legend">
+            <li><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>My core work</li>
+            <li><span class="legend__swatch" aria-hidden="true"></span>Team or open-source system</li>
+          </ul>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 5. WHAT I BUILT ===================================================== -->
+    <section class="section section--case" aria-labelledby="built-title">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 id="built-title">What I built</h2>
+      </div>
+      <div class="prose">
+        <h3>Mechanical</h3>
+        <ul>
+          <li><strong>Linear rail.</strong> I'm designing the linear rail in Onshape, including its tolerances and fits.</li>
+          <li><strong>CAD teaching.</strong> I teach CAD to underclassmen on the team.</li>
+        </ul>
+
+        <h3>Electronics &amp; Embedded</h3>
+        <ul>
+          <li><strong>Low-level arm control.</strong> I work on arm control in C++ on Arduino, talking to the arm over CAN bus.</li>
+        </ul>
+
+        <h3>Controls &amp; Software</h3>
+        <ul>
+          <li><strong>Control architecture.</strong> I planned the architecture: two compute boards, a ThinkPad and a control board, plus a Raspberry Pi for vision. I assigned an owner to each software system.</li>
+          <li><strong>Integration.</strong> The systems are integrated through ROS 2 (Lyrical).</li>
+          <li><strong>Higher-level scripts.</strong> Higher-level behavior is written in MATLAB and Python.</li>
+          <li><strong>Digital twin.</strong> We have a MuJoCo digital twin of the arm simulated in NVIDIA Isaac Sim.</li>
+        </ul>
+
+        <h3>Leadership</h3>
+        <p>I lead a multidisciplinary team of mechanical, electrical, software, and biomedical engineering students.</p>
+      </div>
+    </section>
+
+    <!-- 6. TESTING AND RESULTS ============================================== -->
+    <section class="section section--case" aria-labelledby="results-title">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 id="results-title">Testing and results</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Specs and results</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Value</th><th scope="col">Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Arm degrees of freedom</th><td class="num num--key">6</td><td>Arctos design</td></tr>
+            <tr><th scope="row">Arm reach</th><td class="num">600 mm</td><td>Arctos design spec</td></tr>
+            <tr><th scope="row">Arm payload</th><td class="num">1 kg</td><td>Arctos design spec</td></tr>
+            <tr><th scope="row">Rail travel</th><td class="num"><span class="todo">[TODO: mm]</span></td><td>Onshape design</td></tr>
+            <tr><th scope="row">Sort success rate</th><td class="num"><span class="todo">[TODO: %]</span></td><td><span class="todo">[TODO: number of trials]</span></td></tr>
+            <tr><th scope="row">Time per pick</th><td class="num"><span class="todo">[TODO: s]</span></td><td>Camera detection to object in bin</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. MEDIA ============================================================ -->
+    <section class="section section--case" aria-labelledby="media-title">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 id="media-title">Media</h2>
+      </div>
+      <!-- Images: ../assets/img/arctos/NAME.webp, 1600 px long edge, under 200 KB, loading="lazy".
+           Video: ../assets/video/arctos/NAME.mp4, 4 to 8 s, muted loop, under 2 MB, preload="none". -->
+      <div class="gallery">
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: looping video of the arm picking and sorting">[TODO: 6 s loop, arm picking and sorting, top-down, 16:9 MP4]</div>
+          <figcaption><span class="label">Video</span>The cell sorting objects into bins.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: Onshape render of the linear rail">[TODO: Onshape render of the linear rail, 16:9]</div>
+          <figcaption><span class="label">CAD</span>The linear rail.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: overhead camera view with detections">[TODO: overhead camera frame with detected objects, 16:9]</div>
+          <figcaption><span class="label">Photo</span>What the vision system sees.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: digital twin screenshot">[TODO: Isaac Sim screenshot of the arm twin, 16:9]</div>
+          <figcaption><span class="label">Simulation</span>The MuJoCo twin in Isaac Sim.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: team photo with the arm">[TODO: team with the arm, 16:9]</div>
+          <figcaption><span class="label">Photo</span>The ARCTOS team.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 8. LEARNED / NEXT =================================================== -->
+    <section class="section section--case" aria-labelledby="learned-title">
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2 id="learned-title">What I learned and what's next</h2>
+      </div>
+      <div class="prose">
+        <h3>What I learned</h3>
+        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, what you learned from assigning one owner per software system.]</span></p>
+        <h3>Next steps</h3>
+        <p><span class="todo">[TODO: the team's next milestones]</span></p>
+      </div>
+    </section>
+
+    <!-- 9. PREV / NEXT ====================================================== -->
+    <nav class="pager" aria-label="More case studies">
+      <a class="pager__prev" href="bear-den.html"><span class="label">Previous</span><span class="pager__title"><span class="nowrap">BEAR-DEN</span> Self-Driving Lab</span></a>
+      <a class="pager__next" href="oystare.html"><span class="label">Next</span><span class="pager__title">Oystare Autonomous Surface Vessel</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>&copy; <span data-year>2026</span> Supawat "Phoenix" Pitaknarongphorn</span>
+      <span><a href="#main">Back to top</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

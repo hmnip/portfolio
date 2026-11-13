@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEAR-DEN Self-Driving Lab | Phoenix Pitaknarongphorn</title>
+  <meta name="description" content="Case study: the orchestrator, CNC-guided UV curing system, and arm-and-rail automation I built for BEAR-DEN, a self-driving polymer lab at BU KABLab.">
+  <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f2a4a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <!-- Sharing previews. Absolute URLs so LinkedIn and Slack show the image. Change the domain here if the site moves. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Pitaknarongphorn">
+  <meta property="og:url" content="https://hmnip.github.io/portfolio/projects/bear-den.html">
+  <meta property="og:title" content="BEAR-DEN Self-Driving Lab | Phoenix Pitaknarongphorn">
+  <meta property="og:description" content="Case study: the orchestrator, CNC-guided UV curing system, and arm-and-rail automation I built for BEAR-DEN, a self-driving polymer lab at BU KABLab.">
+  <meta property="og:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Phoenix Pitaknarongphorn: building autonomous robots, from mechanism to control code.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BEAR-DEN Self-Driving Lab | Phoenix Pitaknarongphorn">
+  <meta name="twitter:description" content="Case study: the orchestrator, CNC-guided UV curing system, and arm-and-rail automation I built for BEAR-DEN, a self-driving polymer lab at BU KABLab.">
+  <meta name="twitter:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <!-- Sets saved theme and the js class before first paint (inline on purpose, avoids a flash) -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-mark" href="../index.html">PHOENIX<span>/</span>PITAKNARONGPHORN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="nav-list">
+          <li><a class="is-active" href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="crumb" href="../index.html#projects">All projects</a>
+
+    <!-- 1. TITLE BLOCK ====================================================== -->
+    <header class="title-block">
+      <div class="title-block__name">
+        <span class="label label--accent">Case study 01 / Flagship</span>
+        <h1><span class="nowrap">BEAR-DEN</span> Self-Driving Lab</h1>
+        <p class="expansion">Bayesian Experimental Autonomous Researcher &ndash; Distributed Equipment Network</p>
+      </div>
+      <dl class="title-block__grid">
+        <div class="title-block__cell"><dt>Dates</dt><dd>Oct 2024 to present</dd></div>
+        <div class="title-block__cell"><dt>My role</dt><dd>Undergraduate researcher</dd></div>
+        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
+        <div class="title-block__cell"><dt>Lab</dt><dd>BU KABLab, Prof. Keith Brown</dd></div>
+      </dl>
+      <div class="title-block__row">
+        <ul class="tags" aria-label="Tools">
+          <li><span class="tag">Python</span></li>
+          <li><span class="tag">SiLA 2</span></li>
+          <li><span class="tag">MySQL</span></li>
+          <li><span class="tag">TCP/IP</span></li>
+          <li><span class="tag">Raspberry Pi</span></li>
+          <li><span class="tag">G-code / GRBL</span></li>
+          <li><span class="tag">SolidWorks</span></li>
+          <li><span class="tag">MuJoCo</span></li>
+          <li><span class="tag">Isaac Sim</span></li>
+        </ul>
+        <div class="title-block__links">
+          <span class="label">Paper: manuscript in preparation</span>
+          <span class="todo">[TODO: video link]</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. TL;DR ============================================================ -->
+    <aside class="tldr" aria-label="Summary">
+      <span class="label label--accent">TL;DR</span>
+      <p>BEAR-DEN is a self-driving lab for polymer research. It runs experiments without an operator, and each instrument is exposed through its own SiLA 2 server.</p>
+      <p>I developed the lab's orchestrator, which turns researcher requests into queued jobs, and I wrote the SiLA 2 server for the UV curing station.</p>
+      <p>I built ACUCS, a CNC-guided UV curing system that raised throughput about 12x, and an end effector that reached 100% success over a 50-transfer test.</p>
+    </aside>
+
+    <div class="case-roles">
+      <span class="label">My roles on this project</span>
+      <ol class="timeline">
+        <li class="timeline__item is-current">
+          <span class="timeline__date">Oct 2026 to now</span>
+          <div><p class="timeline__role">Laboratory Robotics Undergraduate Researcher</p><p class="timeline__org">MAP Hub (UROP)</p></div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__date">May to Aug 2025</span>
+          <div><p class="timeline__role">Laboratory Robotics Dean's Fellow</p><p class="timeline__org">KABLab</p></div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__date">Oct 2024 to May 2025</span>
+          <div><p class="timeline__role">Autonomous Systems Undergraduate Researcher</p><p class="timeline__org">KABLab (UROP)</p></div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
+    <section class="section section--case" aria-labelledby="problem-title">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 id="problem-title">Problem and constraints</h2>
+      </div>
+      <div class="prose">
+        <p>A self-driving lab needs every instrument to accept jobs and report results with no one at the bench. BEAR-DEN's instruments come from different vendors.</p>
+        <ul>
+          <li><strong>Mixed hardware.</strong> A UFactory Lite6 6-DOF arm on a Vention linear rail, an Omnicure S1500 UV source, GRBL CNC gantries, a heater-shaker, and an Opentrons liquid handler all had to run as one system.</li>
+          <li><strong>Manual transfers.</strong> 96-well plates were moved between instruments by hand.</li>
+          <li><strong>Traceability.</strong> Every run had to be traceable after the fact.</li>
+          <li><strong>Failure detection.</strong> With no operator present, a failed plate transfer had to be caught by the system itself.</li>
+          <li><strong>Fit.</strong> Third-party instruments had to mount onto standardized gantries.</li>
+          <li><span class="todo">[TODO: any cost, space, or schedule constraints, e.g. the budget behind "low-cost" in ACUCS]</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. SYSTEM OVERVIEW ================================================== -->
+    <section class="section section--case" aria-labelledby="system-title">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 id="system-title">System overview</h2>
+      </div>
+      <figure class="figure">
+        <div class="diagram diagram--wide" tabindex="0" role="region" aria-label="System diagram (scrollable)">
+          <!-- Editable diagram. Each box is a <g class="node">. Add "node--accent" to mark my work.
+               Move a box by changing its rect x/y and the matching text x/y. -->
+          <svg viewBox="0 0 960 360" role="img" aria-labelledby="sys-title sys-desc">
+            <title id="sys-title">BEAR-DEN system overview</title>
+            <desc id="sys-desc">A researcher request becomes a job in a MySQL task queue. The orchestrator dispatches it to the instrument servers, which run SiLA 2. A central PC directs Raspberry Pi controllers over TCP/IP, and the Pis drive the instruments: the arm and linear rail, the CNC UV curing gantry, the liquid handler, and the heater-shaker. Results and logs flow back to the database, append-only.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker>
+              <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead--accent" d="M0 0L10 5L0 10z"/></marker>
+            </defs>
+
+            <!-- Return path: results and logs back to the database -->
+            <path class="edge edge--return" d="M595 72V34H340V70" marker-end="url(#arrow-accent)"/>
+            <text class="edge-label" x="467" y="26" text-anchor="middle">results + logs (append-only)</text>
+
+            <!-- Top row: request to controllers -->
+            <g class="node">
+              <rect x="20" y="72" width="170" height="64" rx="2"/>
+              <text x="105" y="100" text-anchor="middle">Researcher</text>
+              <text class="sub" x="105" y="119" text-anchor="middle">request</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="250" y="72" width="180" height="64" rx="2"/>
+              <text x="340" y="100" text-anchor="middle">MySQL task queue</text>
+              <text class="sub" x="340" y="119" text-anchor="middle">orchestrator</text>
+            </g>
+            <g class="node">
+              <rect x="500" y="72" width="190" height="64" rx="2"/>
+              <text x="595" y="100" text-anchor="middle">Instrument servers</text>
+              <text class="sub" x="595" y="119" text-anchor="middle">SiLA 2, one each</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="750" y="72" width="180" height="64" rx="2"/>
+              <text x="840" y="100" text-anchor="middle">Raspberry Pi</text>
+              <text class="sub" x="840" y="119" text-anchor="middle">controllers</text>
+            </g>
+
+            <path class="edge" d="M190 104H248" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="220" y="96" text-anchor="middle">job</text>
+            <path class="edge" d="M430 104H498" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="464" y="96" text-anchor="middle">dispatch</text>
+            <path class="edge" d="M690 104H748" marker-end="url(#arrow)"/>
+            <text class="edge-label" x="720" y="96" text-anchor="middle">TCP/IP</text>
+
+            <!-- Bus from the controllers to each instrument -->
+            <path class="edge" d="M840 136V196M120 196H840"/>
+            <path class="edge" d="M120 196V254" marker-end="url(#arrow)"/>
+            <path class="edge" d="M360 196V254" marker-end="url(#arrow)"/>
+            <path class="edge" d="M600 196V254" marker-end="url(#arrow)"/>
+            <path class="edge" d="M840 196V254" marker-end="url(#arrow)"/>
+
+            <!-- Bottom row: instruments -->
+            <g class="node node--accent">
+              <rect x="20" y="256" width="200" height="72" rx="2"/>
+              <text x="120" y="286" text-anchor="middle">Arm + linear rail</text>
+              <text class="sub" x="120" y="306" text-anchor="middle">Lite6 on Vention rail</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="260" y="256" width="200" height="72" rx="2"/>
+              <text x="360" y="286" text-anchor="middle">CNC curing gantry</text>
+              <text class="sub" x="360" y="306" text-anchor="middle">ACUCS: GRBL + UV</text>
+            </g>
+            <g class="node">
+              <rect x="500" y="256" width="200" height="72" rx="2"/>
+              <text x="600" y="286" text-anchor="middle">Liquid handler</text>
+              <text class="sub" x="600" y="306" text-anchor="middle">Opentrons</text>
+            </g>
+            <g class="node">
+              <rect x="740" y="256" width="200" height="72" rx="2"/>
+              <text x="840" y="286" text-anchor="middle">Heater-shaker</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>
+          Fig. 1. How a request moves through BEAR-DEN. <span class="scroll-hint">Scroll sideways to see the whole diagram.</span>
+          <ul class="legend" aria-label="Legend">
+            <li><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>My core work</li>
+            <li><span class="legend__swatch" aria-hidden="true"></span>Existing or shared system</li>
+            <li><span class="legend__swatch legend__swatch--return" aria-hidden="true"></span>Results and logs</li>
+          </ul>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 5. WHAT I BUILT ===================================================== -->
+    <section class="section section--case" aria-labelledby="built-title">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 id="built-title">What I built</h2>
+      </div>
+
+      <div class="highlight-box" id="acucs">
+        <span class="label label--accent">Sub-project</span>
+        <h3>ACUCS: Automated Low-Cost CNC-Guided UV Curing System</h3>
+        <p>ACUCS is my flagship sub-project. I assembled 3 CNC gantries and wrote the G-code motion control. It integrated 3 systems into one automated process and raised throughput about 12x.</p>
+        <p><span class="todo">[TODO: what the 3 integrated systems were, and the before/after throughput in plates or samples per hour]</span></p>
+      </div>
+
+      <div class="prose">
+        <h3>Mechanical</h3>
+        <ul>
+          <li><strong>CNC gantries.</strong> I assembled the 3 CNC gantries for ACUCS.</li>
+          <li><strong>End effector.</strong> I designed a custom end effector for plate transfers. It reached a 100% success rate over a 50-transfer test.</li>
+          <li><strong>Instrument mounts.</strong> I designed mounts in SolidWorks and 3D-printed them as rapid prototypes, so third-party instruments fit onto standardized gantries.</li>
+        </ul>
+
+        <h3>Electronics &amp; Embedded</h3>
+        <ul>
+          <li><strong>Distributed control.</strong> I integrated and controlled instruments through Raspberry Pi controllers. Python on a central PC directs each Pi over TCP/IP, so equipment from different vendors runs as one system.</li>
+          <li><strong>Motion control.</strong> I wrote G-code motion control for the GRBL gantries in ACUCS.</li>
+          <li><strong>Closed-loop transfers.</strong> I integrated an end-of-arm camera that validates each plate and stops the arm when a transfer fails.</li>
+        </ul>
+
+        <h3>Controls &amp; Software</h3>
+        <ul>
+          <li><strong>Orchestrator.</strong> I developed the lab's orchestrator. Researcher requests become jobs in a MySQL task queue, and the orchestrator dispatches them to the instrument servers. Results are logged append-only, so every run can be traced.</li>
+          <li><strong>Request parser.</strong> I wrote the parser that turns researcher requests into jobs.</li>
+          <li><strong>UV curing server.</strong> I wrote the SiLA 2 server for the UV curing station, including error handling and task polling.</li>
+          <li><strong>Arm and rail.</strong> I wrote Python control scripts that coordinate the arm and rail to automate 96-well plate transfers that used to be done by hand.</li>
+        </ul>
+
+        <h3 id="map-hub">Current work: MAP Hub</h3>
+        <p>Since October 2026 I've been integrating a homogenizer and a fume-hood spray coater into a nine-instrument expansion served by a Universal Robots arm.</p>
+        <p>I'm building a digital twin of the arm and rail. I test planned motions in MuJoCo and check collisions in NVIDIA Isaac Sim before anything runs on hardware.</p>
+      </div>
+    </section>
+
+    <!-- 6. TESTING AND RESULTS ============================================== -->
+    <section class="section section--case" aria-labelledby="results-title">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 id="results-title">Testing and results</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Measured results</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Result</th><th scope="col">Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">ACUCS throughput</th><td class="num num--key">~12x</td><td>3 systems integrated into one automated process. Baseline: <span class="todo">[TODO: before/after rate]</span></td></tr>
+            <tr><th scope="row">End effector transfers</th><td class="num num--key">100%</td><td>50-transfer test</td></tr>
+            <tr><th scope="row">CNC gantries assembled</th><td class="num">3</td><td>G-code motion control on GRBL</td></tr>
+            <tr><th scope="row">Plate validation</th><td class="num">Camera</td><td>End-of-arm camera stops the arm when a transfer fails. Detection rate: <span class="todo">[TODO: if measured]</span></td></tr>
+            <tr><th scope="row">Plate transfer cycle time</th><td class="num"><span class="todo">[TODO: s]</span></td><td>Arm and rail, one 96-well plate</td></tr>
+            <tr><th scope="row">Runs logged by the orchestrator</th><td class="num"><span class="todo">[TODO: count]</span></td><td>Append-only log in MySQL</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose">
+        <p>I debugged live runs across the mechanical, electrical, and software layers. I also wrote SOPs, validation protocols, run logs, and change records.</p>
+        <p>I'm co-authoring a KABLab manuscript on distributed equipment networks, which is in preparation. I wrote the problem statement and orchestration sections with a co-author.</p>
+      </div>
+    </section>
+
+    <!-- 7. MEDIA ============================================================ -->
+    <section class="section section--case" aria-labelledby="media-title">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 id="media-title">Media</h2>
+      </div>
+      <!-- Images: <img src="../assets/img/bear-den/NAME.webp" width="1600" height="900" loading="lazy" decoding="async" alt="...">
+           WebP, 1600 px on the long edge, under 200 KB each.
+           Video: <video src="../assets/video/bear-den/NAME.mp4" poster="../assets/img/bear-den/NAME-poster.webp" autoplay muted loop playsinline preload="none" width="1280" height="720"></video>
+           MP4 (H.264), 4 to 8 s, no audio track, under 2 MB. -->
+      <div class="gallery">
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: workcell overview photo">[TODO: workcell overview, arm on rail with instruments, 16:9]</div>
+          <figcaption><span class="label">Photo</span>The BEAR-DEN workcell.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: ACUCS gantry close-up">[TODO: ACUCS gantry close-up, 16:9]</div>
+          <figcaption><span class="label">Photo</span>One of the 3 ACUCS CNC gantries.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: looping video of a plate transfer">[TODO: 6 s loop, arm and rail moving a 96-well plate, 16:9 MP4]</div>
+          <figcaption><span class="label">Video</span>An automated plate transfer.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" style="--ratio: 1 / 1" role="img" aria-label="Placeholder: end effector CAD render">[TODO: end effector CAD render, 1:1]</div>
+          <figcaption><span class="label">CAD</span>The custom end effector.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" style="--ratio: 1 / 1" role="img" aria-label="Placeholder: SolidWorks instrument mount render">[TODO: SolidWorks mount render or photo of the printed part, 1:1]</div>
+          <figcaption><span class="label">CAD</span>A 3D-printed instrument mount.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: end-of-arm camera view">[TODO: end-of-arm camera frame of a plate check, 16:9]</div>
+          <figcaption><span class="label">Photo</span>What the validation camera sees.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: MAP Hub digital twin screenshot">[TODO: MuJoCo or Isaac Sim screenshot of the arm and rail twin, 16:9]</div>
+          <figcaption><span class="label">Simulation</span>The MAP Hub digital twin.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 8. LEARNED / NEXT =================================================== -->
+    <section class="section section--case" aria-labelledby="learned-title">
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2 id="learned-title">What I learned and what's next</h2>
+      </div>
+      <div class="prose">
+        <h3>What I learned</h3>
+        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, what debugging live runs across mechanical, electrical, and software taught you, or why you chose a task queue with append-only logs.]</span></p>
+        <h3>Next steps</h3>
+        <ul>
+          <li>Finish integrating the homogenizer and spray coater into the MAP Hub expansion.</li>
+          <li>Use the digital twin to check arm and rail motions before they run on hardware.</li>
+          <li>Complete the manuscript on distributed equipment networks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. PREV / NEXT ====================================================== -->
+    <nav class="pager" aria-label="More case studies">
+      <a class="pager__prev" href="bwsi-drone-racing.html"><span class="label">Previous</span><span class="pager__title">Autonomous Drone Racing</span></a>
+      <a class="pager__next" href="arctos.html"><span class="label">Next</span><span class="pager__title">ARCTOS Sorting Cell</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>&copy; <span data-year>2026</span> Supawat "Phoenix" Pitaknarongphorn</span>
+      <span><a href="#main">Back to top</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

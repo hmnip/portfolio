@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nonlinear Oscillator Frequency Response | Phoenix Pitaknarongphorn</title>
+  <meta name="description" content="Case study: an ME 310 group project measuring a nonlinear mass-spring oscillator's frequency response with an accelerometer setup.">
+  <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f2a4a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <!-- Sharing previews. Absolute URLs so LinkedIn and Slack show the image. Change the domain here if the site moves. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Pitaknarongphorn">
+  <meta property="og:url" content="https://hmnip.github.io/portfolio/projects/nonlinear-oscillator.html">
+  <meta property="og:title" content="Nonlinear Oscillator Frequency Response | Phoenix Pitaknarongphorn">
+  <meta property="og:description" content="Case study: an ME 310 group project measuring a nonlinear mass-spring oscillator's frequency response with an accelerometer setup.">
+  <meta property="og:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Phoenix Pitaknarongphorn: building autonomous robots, from mechanism to control code.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nonlinear Oscillator Frequency Response | Phoenix Pitaknarongphorn">
+  <meta name="twitter:description" content="Case study: an ME 310 group project measuring a nonlinear mass-spring oscillator's frequency response with an accelerometer setup.">
+  <meta name="twitter:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <!-- Sets saved theme and the js class before first paint (inline on purpose, avoids a flash) -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-mark" href="../index.html">PHOENIX<span>/</span>PITAKNARONGPHORN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="nav-list">
+          <li><a class="is-active" href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="crumb" href="../index.html#projects">All projects</a>
+
+    <!-- Short template: title block, TL;DR, what I did, media, prev/next -->
+
+    <!-- 1. TITLE BLOCK ====================================================== -->
+    <header class="title-block">
+      <div class="title-block__name">
+        <span class="label label--accent">Case study 06</span>
+        <h1>Nonlinear Oscillator Frequency Response</h1>
+        <p class="expansion">Accelerometer measurements of a nonlinear mass-spring system</p>
+      </div>
+      <dl class="title-block__grid">
+        <div class="title-block__cell"><dt>Dates</dt><dd>Fall 2026</dd></div>
+        <div class="title-block__cell"><dt>My role</dt><dd><span class="todo">[TODO: your part]</span></dd></div>
+        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
+        <div class="title-block__cell"><dt>Course</dt><dd>ME 310 Instrumentation &amp; Theory of Experiments</dd></div>
+      </dl>
+      <div class="title-block__row">
+        <ul class="tags" aria-label="Tools">
+          <li><span class="tag">Accelerometer</span></li>
+          <li><span class="tag">Frequency response</span></li>
+          <li><span class="tag">Instrumentation</span></li>
+        </ul>
+        <div class="title-block__links">
+          <span class="todo">[TODO: report link, if you want to share it]</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. TL;DR ============================================================ -->
+    <aside class="tldr" aria-label="Summary">
+      <span class="label label--accent">TL;DR</span>
+      <p>In a group project, we measured a nonlinear mass-spring oscillator's frequency response with an accelerometer setup.</p>
+      <p><span class="todo">[TODO: the main finding, e.g. how the response differed from a linear system]</span></p>
+    </aside>
+
+    <!-- 3. WHAT I DID ======================================================= -->
+    <section class="section section--case" aria-labelledby="built-title">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 id="built-title">What I did</h2>
+      </div>
+      <div class="prose">
+        <p><span class="todo">[TODO: your part of the setup, data collection, or analysis, and the tools you used]</span></p>
+      </div>
+    </section>
+
+    <!-- 4. MEDIA ============================================================ -->
+    <section class="section section--case" aria-labelledby="media-title">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 id="media-title">Media</h2>
+      </div>
+      <!-- Images: ../assets/img/nonlinear-oscillator/NAME.webp, 1600 px long edge, under 200 KB, loading="lazy". -->
+      <div class="gallery">
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: oscillator test rig photo">[TODO: test rig photo with the accelerometer, 16:9]</div>
+          <figcaption><span class="label">Photo</span>The test setup.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: frequency response plot">[TODO: frequency response plot, 16:9]</div>
+          <figcaption><span class="label">Plot</span>Measured frequency response.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. PREV / NEXT ====================================================== -->
+    <nav class="pager" aria-label="More case studies">
+      <a class="pager__prev" href="amazon-pallet-flow.html"><span class="label">Previous</span><span class="pager__title">Pallet Tracking Fix at Amazon</span></a>
+      <a class="pager__next" href="bwsi-drone-racing.html"><span class="label">Next</span><span class="pager__title">Autonomous Drone Racing</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>&copy; <span data-year>2026</span> Supawat "Phoenix" Pitaknarongphorn</span>
+      <span><a href="#main">Back to top</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

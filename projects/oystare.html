@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oystare Autonomous Surface Vessel | Phoenix Pitaknarongphorn</title>
+  <meta name="description" content="Case study: propulsion, the camera probe, and requirements for Oystare, a portable autonomous twin-hull rover that maps oyster reefs in shallow Massachusetts water.">
+  <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f2a4a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <!-- Sharing previews. Absolute URLs so LinkedIn and Slack show the image. Change the domain here if the site moves. -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Pitaknarongphorn">
+  <meta property="og:url" content="https://hmnip.github.io/portfolio/projects/oystare.html">
+  <meta property="og:title" content="Oystare Autonomous Surface Vessel | Phoenix Pitaknarongphorn">
+  <meta property="og:description" content="Case study: propulsion, the camera probe, and requirements for Oystare, a portable autonomous twin-hull rover that maps oyster reefs in shallow Massachusetts water.">
+  <meta property="og:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Phoenix Pitaknarongphorn: building autonomous robots, from mechanism to control code.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oystare Autonomous Surface Vessel | Phoenix Pitaknarongphorn">
+  <meta name="twitter:description" content="Case study: propulsion, the camera probe, and requirements for Oystare, a portable autonomous twin-hull rover that maps oyster reefs in shallow Massachusetts water.">
+  <meta name="twitter:image" content="https://hmnip.github.io/portfolio/assets/img/share.png">
+  <!-- Sets saved theme and the js class before first paint (inline on purpose, avoids a flash) -->
+  <script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-mark" href="../index.html">PHOENIX<span>/</span>PITAKNARONGPHORN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="nav-list">
+          <li><a class="is-active" href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <a class="crumb" href="../index.html#projects">All projects</a>
+
+    <!-- 1. TITLE BLOCK ====================================================== -->
+    <header class="title-block">
+      <div class="title-block__name">
+        <span class="label label--accent">Case study 03</span>
+        <h1>Oystare Autonomous Surface Vessel</h1>
+        <p class="expansion">Portable twin-hull rover for mapping oyster reefs</p>
+      </div>
+      <dl class="title-block__grid">
+        <div class="title-block__cell"><dt>Dates</dt><dd>Fall 2026 to Spring 2027</dd></div>
+        <div class="title-block__cell"><dt>My subsystems</dt><dd>Propulsion, camera probe</dd></div>
+        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
+        <div class="title-block__cell"><dt>Course</dt><dd>ME/ECE Senior Design, BU</dd></div>
+      </dl>
+      <div class="title-block__row">
+        <ul class="tags" aria-label="Tools">
+          <li><span class="tag">ArduPilot Rover</span></li>
+          <li><span class="tag">Pixhawk</span></li>
+          <li><span class="tag">ROS 2</span></li>
+          <li><span class="tag">Kalman filter</span></li>
+          <li><span class="tag">Blue Robotics T100</span></li>
+          <li><span class="tag">Trade studies</span></li>
+          <li><span class="tag">Requirements</span></li>
+        </ul>
+        <div class="title-block__links">
+          <span class="todo">[TODO: video or report link after water testing]</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. TL;DR ============================================================ -->
+    <aside class="tldr" aria-label="Summary">
+      <span class="label label--accent">TL;DR</span>
+      <p>Oystare is a portable autonomous twin-hull rover that maps oyster reefs in shallow Massachusetts coastal water, built for a shellfish habitat restoration specialist.</p>
+      <p>I own propulsion and the camera probe. I ran the stakeholder interviews that refocused the project from water quality to reef mapping, and I wrote mechanical requirements traced to acceptance tests.</p>
+      <p>Water testing hasn't happened yet, so results below are placeholders.</p>
+    </aside>
+
+    <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
+    <section class="section section--case" aria-labelledby="problem-title">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 id="problem-title">Problem and constraints</h2>
+      </div>
+      <div class="prose">
+        <p>Our client restores shellfish habitat and needs maps of oyster reefs in shallow coastal water. The project started as a water quality rover. I ran three stakeholder interviews, and what we learned refocused it on reef mapping.</p>
+        <p>I wrote the mechanical constraints and traced each one to an acceptance test.</p>
+      </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Mechanical requirements (scrollable)">
+        <table class="spec-table">
+          <caption>Mechanical requirements</caption>
+          <thead>
+            <tr><th scope="col">Requirement</th><th scope="col">Value</th><th scope="col">Notes</th><th scope="col">Acceptance test</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Portability</th><td class="num num--key">25 kg</td><td>Tied to battery mass</td><td><span class="todo">[TODO: test]</span></td></tr>
+            <tr><th scope="row">Freeboard</th><td class="num num--key">5 cm</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
+            <tr><th scope="row">Reserve buoyancy</th><td class="num num--key">25%</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
+            <tr><th scope="row">Sealing and corrosion</th><td class="num">Required</td><td>Coastal water</td><td><span class="todo">[TODO: test]</span></td></tr>
+            <tr><th scope="row">Thruster guards</th><td class="num">Required</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. SYSTEM OVERVIEW ================================================== -->
+    <section class="section section--case" aria-labelledby="system-title">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 id="system-title">System overview</h2>
+      </div>
+      <figure class="figure">
+        <div class="diagram diagram--wide" tabindex="0" role="region" aria-label="System diagram (scrollable)">
+          <!-- Editable diagram. Each box is a <g class="node">. Add "node--accent" to mark my work. -->
+          <svg viewBox="0 0 960 310" role="img" aria-labelledby="sys-title sys-desc">
+            <title id="sys-title">Oystare system overview</title>
+            <desc id="sys-desc">GPS feeds a Pixhawk flight controller running ArduPilot Rover for waypoint navigation. A Raspberry Pi companion computer runs ROS 2. A Kalman filter handles state estimation. The Pixhawk drives two Blue Robotics T100 thrusters, one per hull. The camera probe sits on a rigid mast with a 12 volt input.</desc>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrowhead" d="M0 0L10 5L0 10z"/></marker>
+            </defs>
+
+            <g class="node">
+              <rect x="20" y="40" width="160" height="64" rx="2"/>
+              <text x="100" y="68" text-anchor="middle">GPS</text>
+              <text class="sub" x="100" y="87" text-anchor="middle">position</text>
+            </g>
+            <g class="node">
+              <rect x="240" y="40" width="220" height="64" rx="2"/>
+              <text x="350" y="68" text-anchor="middle">Pixhawk</text>
+              <text class="sub" x="350" y="87" text-anchor="middle">ArduPilot Rover</text>
+            </g>
+            <g class="node">
+              <rect x="540" y="40" width="210" height="64" rx="2"/>
+              <text x="645" y="68" text-anchor="middle">Raspberry Pi</text>
+              <text class="sub" x="645" y="87" text-anchor="middle">ROS 2 companion</text>
+            </g>
+
+            <path class="edge" d="M180 72H238" marker-end="url(#arrow)"/>
+            <path class="edge" d="M462 72H538" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+
+            <!-- Navigation stack bracket -->
+            <path class="edge" d="M240 128H750" stroke-dasharray="2 4"/>
+            <text class="edge-label" x="645" y="148" text-anchor="middle">Kalman filter for state estimation</text>
+
+            <!-- Pixhawk to thrusters -->
+            <path class="edge" d="M350 104V186M220 186H480"/>
+            <path class="edge" d="M220 186V218" marker-end="url(#arrow)"/>
+            <path class="edge" d="M480 186V218" marker-end="url(#arrow)"/>
+
+            <g class="node node--accent">
+              <rect x="120" y="220" width="200" height="64" rx="2"/>
+              <text x="220" y="248" text-anchor="middle">T100 thruster</text>
+              <text class="sub" x="220" y="267" text-anchor="middle">port hull</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="380" y="220" width="200" height="64" rx="2"/>
+              <text x="480" y="248" text-anchor="middle">T100 thruster</text>
+              <text class="sub" x="480" y="267" text-anchor="middle">starboard hull</text>
+            </g>
+            <g class="node node--accent">
+              <rect x="680" y="220" width="260" height="64" rx="2"/>
+              <text x="810" y="248" text-anchor="middle">Camera probe</text>
+              <text class="sub" x="810" y="267" text-anchor="middle">rigid mast, 12 V input</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption>
+          Fig. 1. Oystare navigation and my subsystems. <span class="scroll-hint">Scroll sideways to see the whole diagram.</span>
+          <span class="todo">[TODO: where the Kalman filter runs, and how camera data reaches the Pi or storage]</span>
+          <ul class="legend" aria-label="Legend">
+            <li><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>My subsystems</li>
+            <li><span class="legend__swatch" aria-hidden="true"></span>Team system</li>
+          </ul>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 5. WHAT I BUILT ===================================================== -->
+    <section class="section section--case" aria-labelledby="built-title">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 id="built-title">What I built</h2>
+      </div>
+      <div class="prose">
+        <h3>Mechanical</h3>
+        <h4>Camera probe deployment</h4>
+        <p>I ran a trade study of four ways to deploy the camera:</p>
+        <ul>
+          <li>Fixed hull mount</li>
+          <li>Tethered winch</li>
+          <li>Telescoping pole</li>
+          <li>Towed sled</li>
+        </ul>
+        <p>We visited a marina site in Wellfleet and ran drag and camera-depth tests. Based on those tests, the team chose a rigid mast over a lead-screw design.</p>
+        <p><span class="todo">[TODO: trade study criteria and scores, and the drag and depth numbers from Wellfleet]</span></p>
+        <h4>Probe housing</h4>
+        <p>I drafted the CAD for the probe housing.</p>
+
+        <h3>Electronics &amp; Embedded</h3>
+        <ul>
+          <li><strong>Propulsion.</strong> Two Blue Robotics T100 thrusters, one per hull.</li>
+          <li><strong>Probe power.</strong> I moved the camera probe to a 12 V input.</li>
+        </ul>
+
+        <h3>Controls &amp; Software</h3>
+        <p>The team's navigation stack uses GPS waypoint navigation on a Pixhawk flight controller running ArduPilot Rover. A Raspberry Pi companion computer runs ROS 2, and a Kalman filter handles state estimation.</p>
+
+        <h3>Requirements</h3>
+        <p>I ran three stakeholder interviews that refocused the project from water quality to reef mapping. I then wrote the mechanical constraints in the table above and traced each one to an acceptance test.</p>
+      </div>
+    </section>
+
+    <!-- 6. TESTING AND RESULTS ============================================== -->
+    <section class="section section--case" aria-labelledby="results-title">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 id="results-title">Testing and results</h2>
+      </div>
+      <p>Water testing is still ahead. These rows fill in once it's done.</p>
+      <div class="table-wrap">
+        <table class="spec-table">
+          <caption>Results (pending water testing)</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Target</th><th scope="col">Measured</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Waypoint tracking error</th><td class="num"><span class="todo">[TODO: m]</span></td><td class="num"><span class="todo">[TODO: waypoint accuracy in m]</span></td></tr>
+            <tr><th scope="row">Total mass</th><td class="num">25 kg</td><td class="num"><span class="todo">[TODO: kg]</span></td></tr>
+            <tr><th scope="row">Freeboard</th><td class="num">5 cm</td><td class="num"><span class="todo">[TODO: cm]</span></td></tr>
+            <tr><th scope="row">Reserve buoyancy</th><td class="num">25%</td><td class="num"><span class="todo">[TODO: %]</span></td></tr>
+            <tr><th scope="row">Camera depth</th><td class="num"><span class="todo">[TODO: m]</span></td><td class="num"><span class="todo">[TODO: m]</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 7. MEDIA ============================================================ -->
+    <section class="section section--case" aria-labelledby="media-title">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 id="media-title">Media</h2>
+      </div>
+      <!-- Images: ../assets/img/oystare/NAME.webp, 1600 px long edge, under 200 KB, loading="lazy".
+           Video: ../assets/video/oystare/NAME.mp4, 4 to 8 s, muted loop, under 2 MB, preload="none". -->
+      <div class="gallery">
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: vessel on the water">[TODO: vessel on the water, 16:9]</div>
+          <figcaption><span class="label">Photo</span>Oystare on the water.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: Wellfleet marina site visit">[TODO: Wellfleet site visit, drag or depth test, 16:9]</div>
+          <figcaption><span class="label">Photo</span>Testing at the Wellfleet marina.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" style="--ratio: 1 / 1" role="img" aria-label="Placeholder: probe housing CAD render">[TODO: probe housing CAD render, 1:1]</div>
+          <figcaption><span class="label">CAD</span>The camera probe housing.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: looping video of waypoint navigation">[TODO: 6 s loop, vessel following waypoints, 16:9 MP4]</div>
+          <figcaption><span class="label">Video</span>Waypoint navigation.</figcaption>
+        </figure>
+        <figure>
+          <div class="media-placeholder" role="img" aria-label="Placeholder: reef map output">[TODO: sample reef map or camera frame of a reef, 16:9]</div>
+          <figcaption><span class="label">Output</span>A reef mapping result.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 8. LEARNED / NEXT =================================================== -->
+    <section class="section section--case" aria-labelledby="learned-title">
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2 id="learned-title">What I learned and what's next</h2>
+      </div>
+      <div class="prose">
+        <h3>What I learned</h3>
+        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, how the stakeholder interviews changed the project.]</span></p>
+        <h3>Next steps</h3>
+        <ul>
+          <li>Water testing, then fill in the results table.</li>
+          <li>Run the acceptance tests for each mechanical requirement.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. PREV / NEXT ====================================================== -->
+    <nav class="pager" aria-label="More case studies">
+      <a class="pager__prev" href="arctos.html"><span class="label">Previous</span><span class="pager__title">ARCTOS Sorting Cell</span></a>
+      <a class="pager__next" href="mobile-manipulator.html"><span class="label">Next</span><span class="pager__title">Color-Sorting Mobile Manipulator</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>&copy; <span data-year>2026</span> Supawat "Phoenix" Pitaknarongphorn</span>
+      <span><a href="#main">Back to top</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
