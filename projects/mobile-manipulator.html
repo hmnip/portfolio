@@ -79,9 +79,6 @@
           <li><span class="tag">DH parameters</span></li>
           <li><span class="tag">Kinematics</span></li>
         </ul>
-        <div class="title-block__links">
-          <span class="todo">[TODO: video or report link]</span>
-        </div>
       </div>
     </header>
 
@@ -90,7 +87,6 @@
       <span class="label label--accent">TL;DR</span>
       <p>A five-person team built a pick-and-place mobile manipulator that sorts objects by color.</p>
       <p>I modeled the arm with DH parameters in MATLAB using Peter Corke's Robotics Toolbox, and I programmed the arm and base to move set distances.</p>
-      <p><span class="todo">[TODO: final demo result, e.g. objects sorted correctly out of total]</span></p>
     </aside>
 
     <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
@@ -101,44 +97,29 @@
       </div>
       <div class="prose">
         <p>The task was to build a mobile manipulator that picks up objects and sorts them by color.</p>
-        <p><span class="todo">[TODO: course task spec, e.g. number and type of objects, arena size, time limit, allowed hardware]</span></p>
       </div>
-    </section>
-
-    <!-- 4. SYSTEM OVERVIEW ================================================== -->
-    <section class="section section--case" aria-labelledby="system-title">
-      <div class="section__head">
-        <span class="section__num">02</span>
-        <h2 id="system-title">System overview</h2>
-      </div>
-      <figure class="figure">
-        <!-- No diagram yet: the source material doesn't describe the controller, sensors, or actuators.
-             Copy the diagram block from bear-den.html once those details are known. -->
-        <div class="media-placeholder" role="img" aria-label="Placeholder for system diagram">[TODO: block diagram. Needs the controller, color sensor, arm actuators, and base drive]</div>
-        <figcaption>Fig. 1. System overview.</figcaption>
-      </figure>
     </section>
 
     <!-- 5. WHAT I BUILT ===================================================== -->
     <section class="section section--case" aria-labelledby="built-title">
       <div class="section__head">
-        <span class="section__num">03</span>
+        <span class="section__num">02</span>
         <h2 id="built-title">What I built</h2>
       </div>
       <div class="prose">
         <p>I worked on kinematics and control, sensing and electronics, systems integration, and the mechanical build and testing.</p>
 
         <h3>Mechanical</h3>
-        <p>I helped build and test the robot. <span class="todo">[TODO: what you built or tested]</span></p>
+        <p>I helped build and test the robot.</p>
 
         <h3>Electronics &amp; Embedded</h3>
-        <p>I worked on sensing and electronics. <span class="todo">[TODO: sensors and boards used, and your part]</span></p>
+        <p>I worked on sensing and electronics.</p>
 
         <h3>Controls &amp; Software</h3>
         <ul>
           <li><strong>Arm model.</strong> I modeled the arm with DH parameters in MATLAB using Peter Corke's Robotics Toolbox.</li>
           <li><strong>Motion.</strong> I programmed the arm and the base to move set distances.</li>
-          <li><strong>Integration.</strong> I worked on integrating the subsystems. <span class="todo">[TODO: details]</span></li>
+          <li><strong>Integration.</strong> I worked on integrating the arm, base, and sensing into one robot.</li>
         </ul>
       </div>
     </section>
@@ -146,7 +127,7 @@
     <!-- 6. TESTING AND RESULTS ============================================== -->
     <section class="section section--case" aria-labelledby="results-title">
       <div class="section__head">
-        <span class="section__num">04</span>
+        <span class="section__num">03</span>
         <h2 id="results-title">Testing and results</h2>
       </div>
       <div class="table-wrap">
@@ -157,18 +138,16 @@
           </thead>
           <tbody>
             <tr><th scope="row">Team size</th><td class="num">5</td><td>ME 416</td></tr>
-            <tr><th scope="row">Arm degrees of freedom</th><td class="num"><span class="todo">[TODO]</span></td><td>DH model in MATLAB</td></tr>
-            <tr><th scope="row">Set-distance accuracy</th><td class="num"><span class="todo">[TODO: mm]</span></td><td>Arm and base</td></tr>
-            <tr><th scope="row">Sort success</th><td class="num"><span class="todo">[TODO: x of y]</span></td><td>Final demo</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <section class="section section--case" aria-labelledby="media-title">
+    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
+    <section class="section section--case" aria-labelledby="media-title" hidden>
       <div class="section__head">
-        <span class="section__num">05</span>
+        <span class="section__num">04</span>
         <h2 id="media-title">Media</h2>
       </div>
       <!-- Images: ../assets/img/mobile-manipulator/NAME.webp, 1600 px long edge, under 200 KB, loading="lazy".
@@ -186,17 +165,6 @@
           <div class="media-placeholder" role="img" aria-label="Placeholder: MATLAB plot of the arm model">[TODO: MATLAB Robotics Toolbox plot of the DH model, 16:9]</div>
           <figcaption><span class="label">Model</span>The arm's DH model in MATLAB.</figcaption>
         </figure>
-      </div>
-    </section>
-
-    <!-- 8. LEARNED / NEXT =================================================== -->
-    <section class="section section--case" aria-labelledby="learned-title">
-      <div class="section__head">
-        <span class="section__num">06</span>
-        <h2 id="learned-title">What I learned</h2>
-      </div>
-      <div class="prose">
-        <p><span class="todo">[TODO: 2 to 4 sentences in your own words]</span></p>
       </div>
     </section>
 

@@ -69,7 +69,6 @@
       <dl class="title-block__grid">
         <div class="title-block__cell"><dt>Dates</dt><dd>Fall 2026 to Spring 2027</dd></div>
         <div class="title-block__cell"><dt>My subsystems</dt><dd>Propulsion, camera probe</dd></div>
-        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
         <div class="title-block__cell"><dt>Course</dt><dd>ME/ECE Senior Design, BU</dd></div>
       </dl>
       <div class="title-block__row">
@@ -82,9 +81,6 @@
           <li><span class="tag">Trade studies</span></li>
           <li><span class="tag">Requirements</span></li>
         </ul>
-        <div class="title-block__links">
-          <span class="todo">[TODO: video or report link after water testing]</span>
-        </div>
       </div>
     </header>
 
@@ -93,7 +89,7 @@
       <span class="label label--accent">TL;DR</span>
       <p>Oystare is a portable autonomous twin-hull rover that maps oyster reefs in shallow Massachusetts coastal water, built for a shellfish habitat restoration specialist.</p>
       <p>I own propulsion and the camera probe. I ran the stakeholder interviews that refocused the project from water quality to reef mapping, and I wrote mechanical requirements traced to acceptance tests.</p>
-      <p>Water testing hasn't happened yet, so results below are placeholders.</p>
+      <p>The vessel is in development. Water testing comes next, and results will be posted here.</p>
     </aside>
 
     <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
@@ -110,14 +106,14 @@
         <table class="spec-table">
           <caption>Mechanical requirements</caption>
           <thead>
-            <tr><th scope="col">Requirement</th><th scope="col">Value</th><th scope="col">Notes</th><th scope="col">Acceptance test</th></tr>
+            <tr><th scope="col">Requirement</th><th scope="col">Value</th><th scope="col">Notes</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Portability</th><td class="num num--key">25 kg</td><td>Tied to battery mass</td><td><span class="todo">[TODO: test]</span></td></tr>
-            <tr><th scope="row">Freeboard</th><td class="num num--key">5 cm</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
-            <tr><th scope="row">Reserve buoyancy</th><td class="num num--key">25%</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
-            <tr><th scope="row">Sealing and corrosion</th><td class="num">Required</td><td>Coastal water</td><td><span class="todo">[TODO: test]</span></td></tr>
-            <tr><th scope="row">Thruster guards</th><td class="num">Required</td><td></td><td><span class="todo">[TODO: test]</span></td></tr>
+            <tr><th scope="row">Portability</th><td class="num num--key">25 kg</td><td>Tied to battery mass</td></tr>
+            <tr><th scope="row">Freeboard</th><td class="num num--key">5 cm</td><td></td></tr>
+            <tr><th scope="row">Reserve buoyancy</th><td class="num num--key">25%</td><td></td></tr>
+            <tr><th scope="row">Sealing and corrosion</th><td class="num">Required</td><td>Coastal water</td></tr>
+            <tr><th scope="row">Thruster guards</th><td class="num">Required</td><td></td></tr>
           </tbody>
         </table>
       </div>
@@ -186,7 +182,6 @@
         </div>
         <figcaption>
           Fig. 1. Oystare navigation and my subsystems. <span class="scroll-hint">Scroll sideways to see the whole diagram.</span>
-          <span class="todo">[TODO: where the Kalman filter runs, and how camera data reaches the Pi or storage]</span>
           <ul class="legend" aria-label="Legend">
             <li><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>My subsystems</li>
             <li><span class="legend__swatch" aria-hidden="true"></span>Team system</li>
@@ -212,7 +207,6 @@
           <li>Towed sled</li>
         </ul>
         <p>We visited a marina site in Wellfleet and ran drag and camera-depth tests. Based on those tests, the team chose a rigid mast over a lead-screw design.</p>
-        <p><span class="todo">[TODO: trade study criteria and scores, and the drag and depth numbers from Wellfleet]</span></p>
         <h4>Probe housing</h4>
         <p>I drafted the CAD for the probe housing.</p>
 
@@ -236,7 +230,7 @@
         <span class="section__num">04</span>
         <h2 id="results-title">Testing and results</h2>
       </div>
-      <p>Water testing is still ahead. These rows fill in once it's done.</p>
+      <p>Water testing is still ahead. The measured column fills in once it's done.</p>
       <div class="table-wrap">
         <table class="spec-table">
           <caption>Results (pending water testing)</caption>
@@ -244,18 +238,17 @@
             <tr><th scope="col">Item</th><th scope="col">Target</th><th scope="col">Measured</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Waypoint tracking error</th><td class="num"><span class="todo">[TODO: m]</span></td><td class="num"><span class="todo">[TODO: waypoint accuracy in m]</span></td></tr>
-            <tr><th scope="row">Total mass</th><td class="num">25 kg</td><td class="num"><span class="todo">[TODO: kg]</span></td></tr>
-            <tr><th scope="row">Freeboard</th><td class="num">5 cm</td><td class="num"><span class="todo">[TODO: cm]</span></td></tr>
-            <tr><th scope="row">Reserve buoyancy</th><td class="num">25%</td><td class="num"><span class="todo">[TODO: %]</span></td></tr>
-            <tr><th scope="row">Camera depth</th><td class="num"><span class="todo">[TODO: m]</span></td><td class="num"><span class="todo">[TODO: m]</span></td></tr>
+            <tr><th scope="row">Total mass</th><td class="num">25 kg</td><td class="num">Pending</td></tr>
+            <tr><th scope="row">Freeboard</th><td class="num">5 cm</td><td class="num">Pending</td></tr>
+            <tr><th scope="row">Reserve buoyancy</th><td class="num">25%</td><td class="num">Pending</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <section class="section section--case" aria-labelledby="media-title">
+    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
+    <section class="section section--case" aria-labelledby="media-title" hidden>
       <div class="section__head">
         <span class="section__num">05</span>
         <h2 id="media-title">Media</h2>
@@ -289,13 +282,10 @@
     <!-- 8. LEARNED / NEXT =================================================== -->
     <section class="section section--case" aria-labelledby="learned-title">
       <div class="section__head">
-        <span class="section__num">06</span>
-        <h2 id="learned-title">What I learned and what's next</h2>
+        <span class="section__num">05</span>
+        <h2 id="learned-title">What's next</h2>
       </div>
       <div class="prose">
-        <h3>What I learned</h3>
-        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, how the stakeholder interviews changed the project.]</span></p>
-        <h3>Next steps</h3>
         <ul>
           <li>Water testing, then fill in the results table.</li>
           <li>Run the acceptance tests for each mechanical requirement.</li>

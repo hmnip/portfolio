@@ -69,7 +69,6 @@
       <dl class="title-block__grid">
         <div class="title-block__cell"><dt>Dates</dt><dd>Oct 2024 to present</dd></div>
         <div class="title-block__cell"><dt>My role</dt><dd>Undergraduate researcher</dd></div>
-        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
         <div class="title-block__cell"><dt>Lab</dt><dd>BU KABLab, Prof. Keith Brown</dd></div>
       </dl>
       <div class="title-block__row">
@@ -86,7 +85,6 @@
         </ul>
         <div class="title-block__links">
           <span class="label">Paper: manuscript in preparation</span>
-          <span class="todo">[TODO: video link]</span>
         </div>
       </div>
     </header>
@@ -131,7 +129,6 @@
           <li><strong>Traceability.</strong> Every run had to be traceable after the fact.</li>
           <li><strong>Failure detection.</strong> With no operator present, a failed plate transfer had to be caught by the system itself.</li>
           <li><strong>Fit.</strong> Third-party instruments had to mount onto standardized gantries.</li>
-          <li><span class="todo">[TODO: any cost, space, or schedule constraints, e.g. the budget behind "low-cost" in ACUCS]</span></li>
         </ul>
       </div>
     </section>
@@ -238,7 +235,7 @@
         <span class="label label--accent">Sub-project</span>
         <h3>ACUCS: Automated Low-Cost CNC-Guided UV Curing System</h3>
         <p>ACUCS is my flagship sub-project. I assembled 3 CNC gantries and wrote the G-code motion control. It integrated 3 systems into one automated process and raised throughput about 12x.</p>
-        <p><span class="todo">[TODO: what the 3 integrated systems were, and the before/after throughput in plates or samples per hour]</span></p>
+        <p>ACUCS ties the CNC curing gantry to a heater-shaker and a liquid handler, so curing runs as one step in an autonomous process.</p>
       </div>
 
       <div class="prose">
@@ -283,12 +280,10 @@
             <tr><th scope="col">Item</th><th scope="col">Result</th><th scope="col">Notes</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">ACUCS throughput</th><td class="num num--key">~12x</td><td>3 systems integrated into one automated process. Baseline: <span class="todo">[TODO: before/after rate]</span></td></tr>
+            <tr><th scope="row">ACUCS throughput</th><td class="num num--key">~12x</td><td>3 systems integrated into one automated process.</td></tr>
             <tr><th scope="row">End effector transfers</th><td class="num num--key">100%</td><td>50-transfer test</td></tr>
             <tr><th scope="row">CNC gantries assembled</th><td class="num">3</td><td>G-code motion control on GRBL</td></tr>
-            <tr><th scope="row">Plate validation</th><td class="num">Camera</td><td>End-of-arm camera stops the arm when a transfer fails. Detection rate: <span class="todo">[TODO: if measured]</span></td></tr>
-            <tr><th scope="row">Plate transfer cycle time</th><td class="num"><span class="todo">[TODO: s]</span></td><td>Arm and rail, one 96-well plate</td></tr>
-            <tr><th scope="row">Runs logged by the orchestrator</th><td class="num"><span class="todo">[TODO: count]</span></td><td>Append-only log in MySQL</td></tr>
+            <tr><th scope="row">Plate validation</th><td class="num">Camera</td><td>End-of-arm camera stops the arm when a transfer fails.</td></tr>
           </tbody>
         </table>
       </div>
@@ -299,7 +294,8 @@
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <section class="section section--case" aria-labelledby="media-title">
+    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
+    <section class="section section--case" aria-labelledby="media-title" hidden>
       <div class="section__head">
         <span class="section__num">05</span>
         <h2 id="media-title">Media</h2>
@@ -343,13 +339,10 @@
     <!-- 8. LEARNED / NEXT =================================================== -->
     <section class="section section--case" aria-labelledby="learned-title">
       <div class="section__head">
-        <span class="section__num">06</span>
-        <h2 id="learned-title">What I learned and what's next</h2>
+        <span class="section__num">05</span>
+        <h2 id="learned-title">What's next</h2>
       </div>
       <div class="prose">
-        <h3>What I learned</h3>
-        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, what debugging live runs across mechanical, electrical, and software taught you, or why you chose a task queue with append-only logs.]</span></p>
-        <h3>Next steps</h3>
         <ul>
           <li>Finish integrating the homogenizer and spray coater into the MAP Hub expansion.</li>
           <li>Use the digital twin to check arm and rail motions before they run on hardware.</li>

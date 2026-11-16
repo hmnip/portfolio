@@ -69,7 +69,6 @@
       <dl class="title-block__grid">
         <div class="title-block__cell"><dt>Dates</dt><dd>Sep 2025 to present</dd></div>
         <div class="title-block__cell"><dt>My role</dt><dd>Project Lead</dd></div>
-        <div class="title-block__cell"><dt>Team size</dt><dd><span class="todo">[TODO: team size]</span></dd></div>
         <div class="title-block__cell"><dt>Organization</dt><dd>BU Robotics Club</dd></div>
       </dl>
       <div class="title-block__row">
@@ -85,8 +84,7 @@
         </ul>
         <div class="title-block__links">
           <!-- Link the repo only once it's confirmed public: https://github.com/BURC-ARCTOS-ARM -->
-          <span class="todo">[TODO: GitHub link, confirm BURC-ARCTOS-ARM is public]</span>
-          <span class="todo">[TODO: video link]</span>
+          <a href="https://arctosrobotics.com" rel="noopener">Arm design: Arctos (open source)</a>
         </div>
       </div>
     </header>
@@ -96,7 +94,7 @@
       <span class="label label--accent">TL;DR</span>
       <p>ARCTOS is a vision-guided sorting cell. An overhead camera identifies objects in a pick-up area, and a 6-DOF arm on a linear rail motion-plans to sort them into bins.</p>
       <p>I lead the team. I planned the control architecture, I'm designing the linear rail in Onshape, and I work on low-level arm control in C++ over CAN bus.</p>
-      <p><span class="todo">[TODO: current status or first result, e.g. first successful sort]</span></p>
+      <p>The project is in progress. This page will add results as the cell starts sorting.</p>
     </aside>
 
     <!-- 3. PROBLEM AND CONSTRAINTS ========================================== -->
@@ -111,7 +109,6 @@
           <li><strong>The arm.</strong> It's based on the open-source <a href="https://arctosrobotics.com" rel="noopener">Arctos</a> design: 3D-printed, with cycloidal and planetary gearboxes, a 600 mm reach, and a 1 kg payload.</li>
           <li><strong>The team.</strong> Members come from mechanical, electrical, software, and biomedical engineering. Each software system needed a clear owner.</li>
           <li><strong>The rail.</strong> The linear rail extends the arm's workspace, so its tolerances and fits matter.</li>
-          <li><span class="todo">[TODO: object types, number of bins, and any cycle time or accuracy target]</span></li>
         </ul>
         <p class="muted">Credit: the arm design comes from the open-source Arctos project at <a href="https://arctosrobotics.com" rel="noopener">arctosrobotics.com</a>. The rail, control architecture, software, and sorting cell are the team's work.</p>
       </div>
@@ -190,7 +187,6 @@
         </div>
         <figcaption>
           Fig. 1. ARCTOS control architecture. <span class="scroll-hint">Scroll sideways to see the whole diagram.</span>
-          <span class="todo">[TODO: confirm the control board is the Arduino, and that the rail runs on the same CAN bus]</span>
           <ul class="legend" aria-label="Legend">
             <li><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>My core work</li>
             <li><span class="legend__swatch" aria-hidden="true"></span>Team or open-source system</li>
@@ -246,16 +242,14 @@
             <tr><th scope="row">Arm degrees of freedom</th><td class="num num--key">6</td><td>Arctos design</td></tr>
             <tr><th scope="row">Arm reach</th><td class="num">600 mm</td><td>Arctos design spec</td></tr>
             <tr><th scope="row">Arm payload</th><td class="num">1 kg</td><td>Arctos design spec</td></tr>
-            <tr><th scope="row">Rail travel</th><td class="num"><span class="todo">[TODO: mm]</span></td><td>Onshape design</td></tr>
-            <tr><th scope="row">Sort success rate</th><td class="num"><span class="todo">[TODO: %]</span></td><td><span class="todo">[TODO: number of trials]</span></td></tr>
-            <tr><th scope="row">Time per pick</th><td class="num"><span class="todo">[TODO: s]</span></td><td>Camera detection to object in bin</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <section class="section section--case" aria-labelledby="media-title">
+    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
+    <section class="section section--case" aria-labelledby="media-title" hidden>
       <div class="section__head">
         <span class="section__num">05</span>
         <h2 id="media-title">Media</h2>
@@ -289,14 +283,15 @@
     <!-- 8. LEARNED / NEXT =================================================== -->
     <section class="section section--case" aria-labelledby="learned-title">
       <div class="section__head">
-        <span class="section__num">06</span>
-        <h2 id="learned-title">What I learned and what's next</h2>
+        <span class="section__num">05</span>
+        <h2 id="learned-title">What's next</h2>
       </div>
       <div class="prose">
-        <h3>What I learned</h3>
-        <p><span class="todo">[TODO: 2 to 4 sentences in your own words. For example, what you learned from assigning one owner per software system.]</span></p>
-        <h3>Next steps</h3>
-        <p><span class="todo">[TODO: the team's next milestones]</span></p>
+        <ul>
+          <li>Finish the linear rail design in Onshape and build it.</li>
+          <li>Connect the overhead camera's detections to arm motion planning.</li>
+          <li>Test planned motions on the digital twin before running them on the arm.</li>
+        </ul>
       </div>
     </section>
 
