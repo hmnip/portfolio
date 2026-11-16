@@ -294,8 +294,7 @@
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
-    <section class="section section--case" aria-labelledby="media-title" hidden>
+    <section class="section section--case" aria-labelledby="media-title">
       <div class="section__head">
         <span class="section__num">05</span>
         <h2 id="media-title">Media</h2>
@@ -305,33 +304,9 @@
            Video: <video src="../assets/video/bear-den/NAME.mp4" poster="../assets/img/bear-den/NAME-poster.webp" autoplay muted loop playsinline preload="none" width="1280" height="720"></video>
            MP4 (H.264), 4 to 8 s, no audio track, under 2 MB. -->
       <div class="gallery">
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: workcell overview photo">[TODO: workcell overview, arm on rail with instruments, 16:9]</div>
-          <figcaption><span class="label">Photo</span>The BEAR-DEN workcell.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: ACUCS gantry close-up">[TODO: ACUCS gantry close-up, 16:9]</div>
-          <figcaption><span class="label">Photo</span>One of the 3 ACUCS CNC gantries.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: looping video of a plate transfer">[TODO: 6 s loop, arm and rail moving a 96-well plate, 16:9 MP4]</div>
-          <figcaption><span class="label">Video</span>An automated plate transfer.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" style="--ratio: 1 / 1" role="img" aria-label="Placeholder: end effector CAD render">[TODO: end effector CAD render, 1:1]</div>
-          <figcaption><span class="label">CAD</span>The custom end effector.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" style="--ratio: 1 / 1" role="img" aria-label="Placeholder: SolidWorks instrument mount render">[TODO: SolidWorks mount render or photo of the printed part, 1:1]</div>
-          <figcaption><span class="label">CAD</span>A 3D-printed instrument mount.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: end-of-arm camera view">[TODO: end-of-arm camera frame of a plate check, 16:9]</div>
-          <figcaption><span class="label">Photo</span>What the validation camera sees.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: MAP Hub digital twin screenshot">[TODO: MuJoCo or Isaac Sim screenshot of the arm and rail twin, 16:9]</div>
-          <figcaption><span class="label">Simulation</span>The MAP Hub digital twin.</figcaption>
+        <figure class="gallery__wide">
+          <a class="sheet" href="../assets/img/bear-den/workcell-render.webp" style="--ratio: 1600 / 560"><img src="../assets/img/bear-den/workcell-render.webp" width="1600" height="560" loading="lazy" decoding="async" alt="Render of the BEAR-DEN workcell: a robot arm on a linear rail between enclosed lab instruments"></a>
+          <figcaption><span class="label">CAD</span>The BEAR-DEN workcell: the arm rides a linear rail between instruments.</figcaption>
         </figure>
       </div>
     </section>
@@ -339,7 +314,7 @@
     <!-- 8. LEARNED / NEXT =================================================== -->
     <section class="section section--case" aria-labelledby="learned-title">
       <div class="section__head">
-        <span class="section__num">05</span>
+        <span class="section__num">06</span>
         <h2 id="learned-title">What's next</h2>
       </div>
       <div class="prose">

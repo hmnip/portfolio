@@ -248,8 +248,7 @@
     </section>
 
     <!-- 7. MEDIA ============================================================ -->
-    <!-- Hidden until photos are added. To show it: delete the word hidden below, then renumber this section and the next one. -->
-    <section class="section section--case" aria-labelledby="media-title" hidden>
+    <section class="section section--case" aria-labelledby="media-title">
       <div class="section__head">
         <span class="section__num">05</span>
         <h2 id="media-title">Media</h2>
@@ -258,24 +257,16 @@
            Video: ../assets/video/arctos/NAME.mp4, 4 to 8 s, muted loop, under 2 MB, preload="none". -->
       <div class="gallery">
         <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: looping video of the arm picking and sorting">[TODO: 6 s loop, arm picking and sorting, top-down, 16:9 MP4]</div>
-          <figcaption><span class="label">Video</span>The cell sorting objects into bins.</figcaption>
+          <a class="sheet" href="../assets/img/arctos/arm-render.webp"><img src="../assets/img/arctos/arm-render.webp" width="772" height="901" loading="lazy" decoding="async" alt="Render of the 6-DOF Arctos robot arm with a gripper"></a>
+          <figcaption><span class="label">CAD</span>The 6-DOF arm the cell is built around. Image: <a href="https://arctosrobotics.com" rel="noopener">Arctos open-source project</a>.</figcaption>
         </figure>
         <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: Onshape render of the linear rail">[TODO: Onshape render of the linear rail, 16:9]</div>
-          <figcaption><span class="label">CAD</span>The linear rail.</figcaption>
+          <a class="sheet" href="../assets/img/arctos/arm-exploded.webp"><img src="../assets/img/arctos/arm-exploded.webp" width="1052" height="1064" loading="lazy" decoding="async" alt="Exploded view of the Arctos arm showing its joints, gearboxes, and printed shell parts"></a>
+          <figcaption><span class="label">CAD</span>Exploded view of the joints and gearboxes. Image: <a href="https://arctosrobotics.com" rel="noopener">Arctos open-source project</a>.</figcaption>
         </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: overhead camera view with detections">[TODO: overhead camera frame with detected objects, 16:9]</div>
-          <figcaption><span class="label">Photo</span>What the vision system sees.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: digital twin screenshot">[TODO: Isaac Sim screenshot of the arm twin, 16:9]</div>
-          <figcaption><span class="label">Simulation</span>The MuJoCo twin in Isaac Sim.</figcaption>
-        </figure>
-        <figure>
-          <div class="media-placeholder" role="img" aria-label="Placeholder: team photo with the arm">[TODO: team with the arm, 16:9]</div>
-          <figcaption><span class="label">Photo</span>The ARCTOS team.</figcaption>
+        <figure class="gallery__wide">
+          <a class="sheet" href="../assets/img/arctos/wiring-schematic.webp" style="--ratio: 1600 / 616"><img src="../assets/img/arctos/wiring-schematic.webp" width="1600" height="616" loading="lazy" decoding="async" alt="Wiring schematic: six joint motor drivers and a gripper servo daisy-chained on a CAN bus, with an Arduino and CAN module, a power supply, and a USB link to the PC"></a>
+          <figcaption><span class="label">Electrical</span>Wiring: each joint driver sits on one CAN bus with its own ID, and the Arduino sends commands to the bus. Click to enlarge. Image: <a href="https://arctosrobotics.com" rel="noopener">Arctos open-source project</a>.</figcaption>
         </figure>
       </div>
     </section>
@@ -283,7 +274,7 @@
     <!-- 8. LEARNED / NEXT =================================================== -->
     <section class="section section--case" aria-labelledby="learned-title">
       <div class="section__head">
-        <span class="section__num">05</span>
+        <span class="section__num">06</span>
         <h2 id="learned-title">What's next</h2>
       </div>
       <div class="prose">

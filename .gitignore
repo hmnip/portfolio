@@ -16,3 +16,6 @@ lighthouse-*.json
 
 # Source media you don't want published (keep originals here, export WebP/MP4 to assets/)
 _raw/
+
+# Raw photos before conversion (not published)
+photos-inbox/

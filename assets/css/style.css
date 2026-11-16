@@ -727,6 +727,25 @@ a.tag:hover { border-color: var(--accent); color: var(--accent); }
   color: var(--ink);
 }
 
+/* Drawing sheet: a light panel for renders and schematics with transparent
+   backgrounds, so dark line work stays readable in both themes. */
+.sheet {
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: center;
+  width: 100%;
+  aspect-ratio: var(--ratio, 4 / 3);
+  padding: var(--space-4);
+  background: #f7f4ee;
+  border: var(--rule-w) solid var(--rule);
+}
+.sheet img { width: 100%; height: 100%; object-fit: contain; background: none; }
+.card__media .sheet { aspect-ratio: auto; height: 100%; border: 0; padding: var(--space-3); }
+.card__media .sheet img { object-fit: contain; }
+a.sheet { transition: border-color 0.2s; }
+a.sheet:hover, a.sheet:focus-visible { border-color: var(--accent); }
+.gallery__wide { grid-column: 1 / -1; }
+
 [hidden] { display: none !important; }
 
 /* Inline marker for a missing fact: [TODO: ...] */
